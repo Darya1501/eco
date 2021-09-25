@@ -24,9 +24,6 @@ $(document).ready(function (e) {
         // a bit hackish to refresh the map
         routingMap.invalidateSize(false);
         vrpMap.invalidateSize(false);
-        geocodingMap.invalidateSize(false);
-        isochroneMap.invalidateSize(false);
-        mapMatchingMap.invalidateSize(false);
     }
 
     var host;// = "http://localhost:9000/api/1";
@@ -408,49 +405,7 @@ function setupMapMatching(map, mmClient) {
         }
     };
 
-    function mybind(key, url, vehicle) {
-        $("#" + key).click(function (event) {
-            $("#" + key).prop('disabled', true);
-            $("#map-matching-response").text("downloading file ...");
-            $.get(url, function (content) {
-                var dom = (new DOMParser()).parseFromString(content, 'text/xml');
-                var pathOriginal = toGeoJSON.gpx(dom);
-                routeLayer.clearLayers();
-                pathOriginal.features[0].properties = {style: {color: "black", weight: 2, opacity: 0.9}};
-                routeLayer.addData(pathOriginal);
-                $("#map-matching-response").text("send file ...");
-                $("#map-matching-error").text("");
-                if (!vehicle)
-                    vehicle = "car";
-                mmClient.vehicle = vehicle;
-                mmClient.doRequest(content)
-                    .then(function (json) {
-                        $("#map-matching-response").text("calculated map matching");
-                        var matchedPath = json.paths[0];
-                        var geojsonFeature = {
-                            type: "Feature",
-                            geometry: matchedPath.points,
-                            properties: {style: {color: "#00cc33", weight: 6, opacity: 0.4}}
-                        };
-                        routeLayer.addData(geojsonFeature);
-                        if (matchedPath.bbox) {
-                            var minLon = matchedPath.bbox[0];
-                            var minLat = matchedPath.bbox[1];
-                            var maxLon = matchedPath.bbox[2];
-                            var maxLat = matchedPath.bbox[3];
-                            var tmpB = new L.LatLngBounds(new L.LatLng(minLat, minLon), new L.LatLng(maxLat, maxLon));
-                            map.fitBounds(tmpB);
-                        }
-                        $("#" + key).prop('disabled', false);
-                    })
-                    .catch(function (err) {
-                        $("#map-matching-response").text("");
-                        $("#map-matching-error").text(err.message);
-                        $("#" + key).prop('disabled', false);
-                    });//doRequest
-            });// get
-        });//click
-    }
+    
 
     var host = "https://raw.githubusercontent.com/graphhopper/directions-api-js-client/master/map-matching-examples";
     mybind("bike_example1", host + "/bike.gpx", "bike");
