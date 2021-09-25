@@ -29,4 +29,4 @@
 СРЕДА ЗАПУСКА iOS приложения
 ----------------------------
 1) проект лежит в директории Eco Route/Eco Route
-2) запустить Eco Route.xcodeproj в Xcode 12.4 с помощью утилиты Simulator
+2) открыть Eco Route.xcodeproj в Xcode 12.4 и запустить приложение с помощью утилиты Simulator
