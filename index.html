@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>JavaScript examples for the GraphHopper Directions API </title>
+        <title>PEGIY DUDOCHNIK</title>
         <link type="image/png" rel="icon" href="https://www.graphhopper.com/favicon.ico"/>
         <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 
@@ -21,26 +21,10 @@
     <body>        
         <div id="main">
             <div id="logo" class="left">
-                <a href="https://graphhopper.com">
-                    <img src="https://graphhopper.com/dashboard/img/header.png" alt="GraphHopper Logo"/>
+                <a href="/">
+                    <img style="width:100px; height:100px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWzxKE_QAcV7iGPs-H5HRkdBIDGT_s-XAFSWT00ZMTUZ5FfwATtNS9eAbaDR5bmUXTVfU&usqp=CAU"/>
                 </a>
             </div>                        
-
-            <div id="enter_key">
-                <div>
-                    <img id="custom_key_enabled" class="hide" src="img/included.png" alt="using custom API key"/>
-                    <input id="custom_key_input" placeholder="Enter your API key"/>
-                    <button id="custom_key_button">Set</button>
-                </div>
-                <ul id="custom_key_desc" class="small right">
-                    <li><a
-                            href="https://graphhopper.com/#directions-api"><b>Free Sign Up</b></a></li>                    
-                    <li><a href="https://github.com/graphhopper/directions-api-js-client">Fork this at Github</a></li>
-                    <li><a href="https://graphhopper.com/api/1/docs">Directions API Documentation</a></li>
-                </ul>
-            </div>
-
-            <h2 class="left">Directions API Live Examples</h2>
 
             <div class="clear"></div>
             <div class="horizontal">                
@@ -51,17 +35,10 @@
             </div>
 
             <div id="routing" class="tab-content">
-
                 <div style="padding-bottom: 10px;">
-                    The Routing API calculates the best path between two or more locations. 
-                    Calculate your own route via clicking on the map and try 
-                    <a href="https://graphhopper.com/maps">GraphHopper Maps</a> for a more advanced 
-                    routing demo.
                 </div>
                 <br/>
-
                 <div id="routing-response" style="float: right; padding-left: 20px;">
-
                 </div>
                 <div id="routing-error" style="float: right; padding-left: 20px;">
                 </div>
@@ -104,14 +81,6 @@
                         <div>
                             <button id="set_example_tsp2">Set Open Salesman</button>       
                         </div>
-                        <!--
-                        <div>
-                            <button id="set_example_us_tour">Set Beauty US Tour</button>
-                        </div>
-                        <div>
-                            <button id="set_example_uk_tour">Set Election Campaign UK</button>
-                        </div>
-                        -->
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -121,27 +90,5 @@
                 <div id="vrp-response" style="float: right; padding-left: 20px;">
                 </div>
             </div>
-
-
-        {% comment %} <!-- Matomo -->
-        <script type="text/javascript">
-        PIWIK = false;
-        if (PIWIK) {
-          var _paq = window._paq || [];
-          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-          _paq.push(['trackPageView']);
-          _paq.push(['enableLinkTracking']);
-          (function() {
-            var u="//matomo.graphhopper.com/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-          })();
-        }
-        </script>
-        <noscript><p><img src="https://matomo.graphhopper.com/matomo.php?idsite=1&amp;rec=1" style="border:0;" alt=""/></p></noscript>
-        <!-- End Matomo Code --> {% endcomment %}
-
     </body>
 </html>
