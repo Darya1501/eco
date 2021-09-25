@@ -1,98 +1,75 @@
-html, body, #basicMap {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  font-family: "Helvetica CY", "Arial", sans-serif;
-}
-a, button {
-  cursor: pointer;
-}
-div.olControlAttribution, div.olControlScaleLine {
-  font-family: Verdana;
-  font-size: 0.7em;
-  bottom: 3px;
+html,
+body,
+#basicMap {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: "Helvetica CY", "Arial", sans-serif;
 }
 
-
-#demoMap {
-  width: 100%;
-  height: 100vh;
+a,
+button {
+    cursor: pointer;
 }
 
-.left-menu {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 400px;
-  z-index: 1006;
+div.olControlAttribution,
+div.olControlScaleLine {
+    font-family: Verdana;
+    font-size: 0.7em;
+    bottom: 3px;
 }
 
-.left-menu__background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: rgb(178, 231, 194);
-  padding: 40px;
+.header {
+    display: flex;
+    justify-content: space-between;
 }
 
-.left-menu__button img {
-  width: 30px;
-  height: 40px;
-  transform: rotate(90deg);
-}
-
-.left-menu__button {
-  background-color: #fff;
-  border: none;
-  position: absolute;
-  right: -40px;
-  top: 30px;
-  z-index: 999;
-  border-radius: 0 5px 5px 0;
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
 }
 
 .left-menu__input {
-  display: block;
-  width: 90%;
-  height: 40px;
-  margin: auto;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding-left: 10px;
+    display: block;
+    width: 90%;
+    height: 40px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding-left: 10px;
 }
 
 .left-menu__search-button {
-  display: block;
-  margin: auto;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
+    display: block;
+    margin: auto;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
 }
 
 .lead {
-    font-size: 20px;    
+    font-size: 20px;
 }
 
-#main, #vrp-map-wrapper {
-    margin: auto; 
+#main,
+#vrp-map-wrapper {
+    margin: auto;
     width: 1000px;
 }
 
 #main li {
-    line-height: 22px;    
+    line-height: 22px;
 }
 
 a {
     text-decoration: none;
-    color: #3872f2;    
+    color: #3872f2;
 }
+
 a:hover {
     color: #3091f7;
 }
@@ -101,14 +78,15 @@ a:hover {
     padding: 10px;
 }
 
-#button-list button, #example-list button {
+#button-list button,
+#example-list button {
     margin: 5px;
 }
 
 #example-list {
     float: left;
-    max-width: 190px;    
-    margin-top: 10px;    
+    max-width: 190px;
+    margin-top: 10px;
 }
 
 #vrp-map {
@@ -128,7 +106,7 @@ a:hover {
     border: none;
 }
 
-.leaflet-marker-icon .number{
+.leaflet-marker-icon .number {
     position: relative;
     top: -37px;
     font-size: 12px;
@@ -140,9 +118,11 @@ a:hover {
     padding-top: 10px;
     float: right
 }
+
 #custom_key_input {
     width: 340px;
 }
+
 #custom_key_enabled {
     margin-bottom: -5px;
 }
@@ -152,7 +132,8 @@ a:hover {
     font-weight: bold;
 }
 
-#vrp-error, #vrp-response {
+#vrp-error,
+#vrp-response {
     padding: 10px;
 }
 
@@ -164,7 +145,7 @@ a:hover {
     display: none;
 }
 
-#custom_key_desc li {    
+#custom_key_desc li {
     list-style-type: none;
     padding-right: 20px;
 }
@@ -222,16 +203,17 @@ a:hover {
     display: inline-block;
     font-size: 16px;
     padding-left: 1.1em;
-    padding-right: 1.1em;    
+    padding-right: 1.1em;
     padding-bottom: 0.2em;
     text-shadow: 0 1px 1px #f7f7f7;
 }
+
 #mynavigation {
     list-style-type: none;
 }
 
-#mynavigation .current { 
-    border-bottom: 3px inset black;    
+#mynavigation .current {
+    border-bottom: 3px inset black;
 }
 
 #geocoding-map {
