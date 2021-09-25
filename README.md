@@ -17,7 +17,6 @@
 	<li>Git</li>  
 	<li>Swift</li>
 	<li>Xcode</li>
-	<li>Firebase</li>
 	<li>Git</li>
  </ul>
 
