@@ -26,8 +26,8 @@
       <div class="header">
         <div id="logo" class="left">
           <a href="/">
-            <img style="width:100px; height:100px"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWzxKE_QAcV7iGPs-H5HRkdBIDGT_s-XAFSWT00ZMTUZ5FfwATtNS9eAbaDR5bmUXTVfU&usqp=CAU" />
+            <img style="width:200px; height:100px"
+              src="./img/logo-horisontal.svg" />
           </a>
         </div>
         <div class="search">
@@ -69,6 +69,41 @@
       <button class="sidebar-btn"><img src="./img/car.svg" alt="car" class="sidebar-icon"></button>
       <button class="sidebar-btn"><img src="./img/scooter.svg" alt="scooter" class="sidebar-icon"></button>
       <button class="sidebar-btn"><img src="./img/walk.svg" alt="walk" class="sidebar-icon"></button>
+
+      <div class="filters">
+        <span>На своём пути я хочу видеть:</span>
+        <div class="filter-string"><input type="checkbox" id="trash-can" disabled title="Будет реализовано позже">
+          <label for="trash-can">Мусоки</label></div>
+        <div class="filter-string"><input type="checkbox" id="processing" disabled title="Будет реализовано позже">
+          <label for="processing">Пункты переработки</label></div>
+        <div class="filter-string"><input type="checkbox" id="parking" disabled title="Будет реализовано позже">
+          <label for="parking">Стоянки для велосипеда</label></div>
+        <div class="filter-string"><input type="checkbox" id="hire" disabled title="Будет реализовано позже">
+          <label for="hire">Пункты проката велосипедов</label></div>
+        <div class="filter-string"><input type="checkbox" id="scooters" disabled title="Будет реализовано позже">
+          <label for="scooters">Пункты проката самокатов</label></div>
+        <div class="filter-string"><input type="checkbox" id="eco-brand" disabled title="Будет реализовано позже">
+          <label for="eco-brand">Eco-friendly бренды</label></div>
+      </div>
+    </div>
+
+    <div class="colors">
+      <span>Обозначения маршрутов:</span>
+      <div class="block">
+        <div class="square" id="green"></div>
+        <span class="digits"> - AQI &#60; 50, CO<sup>2</sup> &#60; 250</span>
+        <span class="description">Минимальное влияние на здоровье</span>
+      </div>
+      <div class="block">
+        <div class="square" id="yellow"></div>
+        <span class="digits"> - AQI &#60; 200, CO<sup>2</sup> &#60; 500</span>
+        <span class="description">Небольшое влияние на здоровье</span>
+      </div>
+      <div class="block">
+        <div class="square" id="red"></div>
+        <span class="digits"> - AQI &#62; 250, CO<sup>2</sup> &#62; 600</span>
+        <span class="description">Заметное влияние на здоровье</span>
+      </div>
     </div>
 
     <script type="text/javascript" src="js/userInteraction.js"></script>

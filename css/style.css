@@ -37,13 +37,28 @@ div.olControlScaleLine {
     top: 35px;
     display: flex;
     flex-direction: column;
-    height: 250px;
     justify-content: space-between;
+    width: 200px;
+}
+
+.filters {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters span{
+    margin-bottom: 10px;
+}
+
+.filter-string {
+    margin-bottom: 10px;
 }
 
 .sidebar-btn {
     padding: 10px 0;
     border: none;
+    margin-bottom: 20px;
 }
 
 .left-menu__input {
@@ -233,4 +248,38 @@ a:hover {
 
 #geocoding-map {
     margin-top: 10px;
+}
+
+
+.colors {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+}
+
+.colors .block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.square {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 7px;
+}
+
+#green {
+    background-color: green;
+}
+#yellow {
+    background-color: yellow;
+}
+#red {
+    background-color: red;
 }
