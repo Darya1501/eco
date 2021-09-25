@@ -56,7 +56,7 @@ $(document).ready(function (e) {
 });
 
 function setupRoutingAPI(map, ghRouting) {
-    map.setView([52.521235, 13.3992], 12);
+    map.setView([55.76, 37.57], 12);
 
     var instructionsDiv = $("#instructions");
     map.on('click', function (e) {
