@@ -1,0 +1,24 @@
+{
+  "name": "eco",
+  "description": "echo",
+  "license": "pegiy dudochnik",
+  "main": "dist/graphhopper-client.js",
+  "scripts": {},
+  "browserify": {
+    "transform": [
+      "browserify-swap"
+    ]
+  },
+  "dependencies": {
+    "bluebird": "3.5.5",
+    "superagent": "5.0.6"
+  },
+  "devDependencies": {
+    "browserify": "16.2.3",
+    "browserify-swap": "0.2.2",
+    "derequire": "2.0.6",
+    "jshint": "2.10.2",
+    "uglifyify": "5.0.2",
+    "watchify": "3.11.1"
+  }
+}
