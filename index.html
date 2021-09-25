@@ -39,7 +39,6 @@
 
       </div>
 
-      <div class="clear"></div>
       <div class="horizontal">
         <ul id="mynavigation" class="tabs-menu">
           <li class="current"><a href="#routing">Routing API</a></li>
@@ -47,13 +46,11 @@
       </div>
 
       <div id="routing" class="tab-content">
-        <div style="padding-bottom: 10px;">
-        </div>
-        <br />
+
         <div id="routing-response" style="float: right; padding-left: 20px;">
         </div>
  
-        <div id="routing-map" style="cursor: default; height:600px; width: 1000px;"></div>
+        <div id="routing-map" style="cursor: default; height:600px;"></div>
 
         <div id="instructions-header">
           Click to see instructions for route
@@ -64,49 +61,71 @@
     </div>
 
     <div class="right-sidebar">
-      <span class="sidebar-label">Выберите вид транспорта:</span>
-      <button class="sidebar-btn"><img src="./img/bike.svg" alt="bike" class="sidebar-icon"></button>
-      <button class="sidebar-btn"><img src="./img/car.svg" alt="car" class="sidebar-icon"></button>
-      <button class="sidebar-btn"><img src="./img/scooter.svg" alt="scooter" class="sidebar-icon"></button>
-      <button class="sidebar-btn"><img src="./img/walk.svg" alt="walk" class="sidebar-icon"></button>
+      <button class="hide-btn"><img src="./img/down.svg" alt=""></button>
+      <div class="content">
+        <span class="sidebar-label">Выберите вид транспорта:</span>
+        <button class="sidebar-btn"><img src="./img/bike.svg" alt="bike" class="sidebar-icon"></button>
+        <button class="sidebar-btn"><img src="./img/car.svg" alt="car" class="sidebar-icon"></button>
+        <button class="sidebar-btn"><img src="./img/scooter.svg" alt="scooter" class="sidebar-icon"></button>
+        <button class="sidebar-btn"><img src="./img/walk.svg" alt="walk" class="sidebar-icon"></button>
 
-      <div class="filters">
-        <span>На своём пути я хочу видеть:</span>
-        <div class="filter-string"><input type="checkbox" id="trash-can" disabled title="Будет реализовано позже">
-          <label for="trash-can">Мусоки</label></div>
-        <div class="filter-string"><input type="checkbox" id="processing" disabled title="Будет реализовано позже">
-          <label for="processing">Пункты переработки</label></div>
-        <div class="filter-string"><input type="checkbox" id="parking" disabled title="Будет реализовано позже">
-          <label for="parking">Стоянки для велосипеда</label></div>
-        <div class="filter-string"><input type="checkbox" id="hire" disabled title="Будет реализовано позже">
-          <label for="hire">Пункты проката велосипедов</label></div>
-        <div class="filter-string"><input type="checkbox" id="scooters" disabled title="Будет реализовано позже">
-          <label for="scooters">Пункты проката самокатов</label></div>
-        <div class="filter-string"><input type="checkbox" id="eco-brand" disabled title="Будет реализовано позже">
-          <label for="eco-brand">Eco-friendly бренды</label></div>
+        <div class="filters">
+          <span>На своём пути я хочу видеть:</span>
+          <div class="filter-string"><input type="checkbox" id="trash-can" disabled title="Будет реализовано позже">
+            <label for="trash-can">Мусоки</label></div>
+          <div class="filter-string"><input type="checkbox" id="processing" disabled title="Будет реализовано позже">
+            <label for="processing">Пункты переработки</label></div>
+          <div class="filter-string"><input type="checkbox" id="parking" disabled title="Будет реализовано позже">
+            <label for="parking">Стоянки для велосипеда</label></div>
+          <div class="filter-string"><input type="checkbox" id="hire" disabled title="Будет реализовано позже">
+            <label for="hire">Пункты проката велосипедов</label></div>
+          <div class="filter-string"><input type="checkbox" id="scooters" disabled title="Будет реализовано позже">
+            <label for="scooters">Пункты проката самокатов</label></div>
+          <div class="filter-string"><input type="checkbox" id="eco-brand" disabled title="Будет реализовано позже">
+            <label for="eco-brand">Eco-friendly бренды</label></div>
+        </div>
       </div>
     </div>
 
     <div class="colors">
-      <span>Обозначения маршрутов:</span>
-      <div class="block">
-        <div class="square" id="green"></div>
-        <span class="digits"> - AQI &#60; 50, CO<sup>2</sup> &#60; 250</span>
-        <span class="description">Минимальное влияние на здоровье</span>
-      </div>
-      <div class="block">
-        <div class="square" id="yellow"></div>
-        <span class="digits"> - AQI &#60; 200, CO<sup>2</sup> &#60; 500</span>
-        <span class="description">Небольшое влияние на здоровье</span>
-      </div>
-      <div class="block">
-        <div class="square" id="red"></div>
-        <span class="digits"> - AQI &#62; 250, CO<sup>2</sup> &#62; 600</span>
-        <span class="description">Заметное влияние на здоровье</span>
+      <button class="hide-btn"><img src="./img/down.svg" alt=""></button>
+      <div class="content">
+        <span>Обозначения маршрутов:</span>
+        <div class="block">
+          <div class="square" id="green"></div>
+          <span class="digits"> - AQI &#60; 50, CO<sup>2</sup> &#60; 250</span>
+          <span class="description">Минимальное влияние на здоровье</span>
+        </div>
+        <div class="block">
+          <div class="square" id="yellow"></div>
+          <span class="digits"> - AQI &#60; 200, CO<sup>2</sup> &#60; 500</span>
+          <span class="description">Небольшое влияние на здоровье</span>
+        </div>
+        <div class="block">
+          <div class="square" id="red"></div>
+          <span class="digits"> - AQI &#62; 250, CO<sup>2</sup> &#62; 600</span>
+          <span class="description">Заметное влияние на здоровье</span>
+        </div>
       </div>
     </div>
 
     <script type="text/javascript" src="js/userInteraction.js"></script>
+    <script> 
+      const buttons = document.querySelectorAll('.hide-btn');
+      buttons.forEach(button => {
+        button.addEventListener('click', event => {
+          const target = event.target;
+          const col = target.closest('.colors');
+          const side = target.closest('.right-sidebar');
+
+          if (col) {
+            col.classList.contains('my-hide') ? col.classList.remove('my-hide') : col.classList.add('my-hide');
+          } else if (side) {
+            side.classList.contains('my-hide') ? side.classList.remove('my-hide') : side.classList.add('my-hide');
+          }
+        })
+      })
+    </script>
 
 
   </body>
