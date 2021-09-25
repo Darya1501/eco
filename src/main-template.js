@@ -1,9 +1,9 @@
 
-var GraphHopperOptimization = require('./GraphHopperOptimization.js');
+// var GraphHopperOptimization = require('./GraphHopperOptimization.js');
 var GraphHopperRouting = require('./GraphHopperRouting.js');
 
 var GraphHopper = {
-    "Optimization": GraphHopperOptimization,
+    // "Optimization": GraphHopperOptimization,
     "Routing": GraphHopperRouting,
 };
 

@@ -19,15 +19,6 @@ GraphHopperRouting = function (args) {
     this.timeout = 10000;
     this.skip = {"skip": true, "host": true, "basePath": true, "graphhopper_maps_host": true, "turn_sign_map": true, "timeout": true, "data_type": true};
 
-// TODO make reading of /api/1/info/ possible
-//    this.elevation = false;
-//    var featureSet = this.features[this.vehicle];
-//    if (featureSet && featureSet.elevation) {
-//        if ('elevation' in params)
-//            this.elevation = params.elevation;
-//        else
-//            this.elevation = true;
-//    }
 
     this.graphhopper_maps_host = "https://graphhopper.com/maps/?";
     // TODO use the i18n text provided by api/1/i18n in over 25 languages
