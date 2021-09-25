@@ -167,7 +167,7 @@ function setupRouteOptimizationAPI(map, ghOptimization, ghRouting) {
         index = parseInt(index);
         if (index === 0) {
             new L.Marker([lat, lng], {
-                icon: new L.NumberedDivIcon({iconUrl: './img/marker-icon-green.png', number: '1'}),
+                icon: new L.NumberedDivIcon({iconUrl: './img/marker-icon.png', number: '1'}),
                 bounceOnAdd: true,
                 bounceOnAddOptions: {duration: 800, height: 200}
             }).addTo(routingLayer);
