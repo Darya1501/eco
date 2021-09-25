@@ -31,6 +31,21 @@ div.olControlScaleLine {
     width: 70%;
 }
 
+.right-sidebar {
+    position: absolute;
+    right: 25px;
+    top: 35px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-between;
+}
+
+.sidebar-btn {
+    padding: 10px 0;
+    border: none;
+}
+
 .left-menu__input {
     display: block;
     width: 90%;
