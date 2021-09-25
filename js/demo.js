@@ -10,9 +10,10 @@ $(document).ready(function (e) {
 
     $(".tab-content").css("display", "none");
     $(".tabs-menu a").click(function (event) {
-        // event.preventDefault();
         showTab($(this));
     });
+
+    $(".tabs-menu a")[0].click();
 
     function showTab(thisDiv) {
         thisDiv.parent().addClass("current");
@@ -25,6 +26,7 @@ $(document).ready(function (e) {
         routingMap.invalidateSize(false);
         vrpMap.invalidateSize(false);
     }
+
 
     var host;// = "http://localhost:9000/api/1";
 
