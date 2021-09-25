@@ -10,10 +10,9 @@ $(document).ready(function (e) {
 
     $(".tab-content").css("display", "none");
     $(".tabs-menu a").click(function (event) {
+        // event.preventDefault();
         showTab($(this));
     });
-
-    $(".tabs-menu a")[0].click();
 
     function showTab(thisDiv) {
         thisDiv.parent().addClass("current");
@@ -27,13 +26,12 @@ $(document).ready(function (e) {
         vrpMap.invalidateSize(false);
     }
 
-
     var host;// = "http://localhost:9000/api/1";
 
     //
     // Sign-up for free and get your own key: https://graphhopper.com/#directions-api
     //
-    var defaultKey = "c9b2b65d-be3d-4d96-b19c-48365a066ae3";
+    var defaultKey = "ead6894d-f9ec-4a9c-86e1-bbe84810f7fc";
     var profile = "car";
 
     // create a routing client to fetch real routes, elevation.true is only supported for vehicle bike or foot
@@ -69,12 +67,15 @@ function setupRoutingAPI(map, ghRouting) {
 
         L.marker(e.latlng, {icon: iconObject}).addTo(routingLayer);
         ghRouting.addPoint(new GHInput(e.latlng.lat, e.latlng.lng));
+        console.log(ghRouting);
         if (ghRouting.points.length > 1) {
             // ******************
             //  Calculate route! 
             // ******************
+            
             ghRouting.doRequest()
                 .then(function (json) {
+                    console.log(json);
                     var path = json.paths[0];
                     routingLayer.addData({
                         "type": "Feature",
@@ -168,3 +169,9 @@ function setupMapMatching(map, mmClient) {
     mybind("bike_example1", host + "/bike.gpx", "bike");
     mybind("car_example1", host + "/car.gpx", "car");
 }
+
+
+
+
+
+

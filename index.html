@@ -31,10 +31,10 @@
           </a>
         </div>
         <div class="search">
-          <input type="search" class="left-menu__input" placeholder="Точка А">
-          <input type="search" class="left-menu__input" placeholder="Точка Б">
+          <input value="Новый арбат 22" type="text" id="from" class="left-menu__input" placeholder="Точка А">
+          <input value="Новый арбат 2" type="text" id="to" class="left-menu__input" placeholder="Точка Б">
 
-          <button class="left-menu__search-button">Построить маршрут</button>
+          <button id="reqButton" class="left-menu__search-button">Построить маршрут</button>
         </div>
 
       </div>
@@ -52,9 +52,7 @@
         <br />
         <div id="routing-response" style="float: right; padding-left: 20px;">
         </div>
-        <div id="routing-error" style="float: right; padding-left: 20px;">
-        </div>
-
+ 
         <div id="routing-map" style="cursor: default; height:600px; width: 1000px;"></div>
 
         <div id="instructions-header">
@@ -72,6 +70,9 @@
       <button class="sidebar-btn"><img src="./img/scooter.svg" alt="scooter" class="sidebar-icon"></button>
       <button class="sidebar-btn"><img src="./img/walk.svg" alt="walk" class="sidebar-icon"></button>
     </div>
+
+    <script type="text/javascript" src="js/userInteraction.js"></script>
+
 
   </body>
 </html>
