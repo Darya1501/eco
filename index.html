@@ -31,10 +31,10 @@
           </a>
         </div>
         <div class="search">
-          <input type="search" class="left-menu__input" placeholder="Точка А">
-          <input type="search" class="left-menu__input" placeholder="Точка Б">
+          <input value="Новый арбат 22" type="text" id="from" class="left-menu__input" placeholder="Точка А">
+          <input value="Новый арбат 2" type="text" id="to" class="left-menu__input" placeholder="Точка Б">
 
-          <button class="left-menu__search-button">Построить маршрут</button>
+          <button id="reqButton" class="left-menu__search-button">Построить маршрут</button>
         </div>
 
       </div>
@@ -43,7 +43,6 @@
       <div class="horizontal">
         <ul id="mynavigation" class="tabs-menu">
           <li class="current"><a href="#routing">Routing API</a></li>
-          <li><a href="#optimization">Route Optimization API</a></li>
         </ul>
       </div>
 
@@ -53,9 +52,7 @@
         <br />
         <div id="routing-response" style="float: right; padding-left: 20px;">
         </div>
-        <div id="routing-error" style="float: right; padding-left: 20px;">
-        </div>
-
+ 
         <div id="routing-map" style="cursor: default; height:600px; width: 1000px;"></div>
 
         <div id="instructions-header">
@@ -64,46 +61,18 @@
         </div>
 
       </div>
+    </div>
 
-      <div id="optimization" class="tab-content">
-        <div>
-          The Route Optimization API gets several locations and vehicles as input and calculates the best
-          route for every of the vehicles, where several constraints like capacity or time windows can be added.
-          Click on the map to add locations and then click 'optimize' or just on one of the examples.
-          Or use our more advanced <a href="https://graphhopper.com/dashboard/#/editor">route editor</a> in the
-          dashboard.
-        </div>
+    <div class="right-sidebar">
+      <span class="sidebar-label">Выберите вид транспорта:</span>
+      <button class="sidebar-btn"><img src="./img/bike.svg" alt="bike" class="sidebar-icon"></button>
+      <button class="sidebar-btn"><img src="./img/car.svg" alt="car" class="sidebar-icon"></button>
+      <button class="sidebar-btn"><img src="./img/scooter.svg" alt="scooter" class="sidebar-icon"></button>
+      <button class="sidebar-btn"><img src="./img/walk.svg" alt="walk" class="sidebar-icon"></button>
+    </div>
 
-        <div id="button-list" class="right">
-          vehicles:
-          <input id="optimize_vehicles" style="max-width: 60px" type="number" min="1" max="4" value="2" />
-          <button id="optimize_button">Optimize</button>
-          <button id="vrp_clear_button">Clear</button>
-        </div>
+    <script type="text/javascript" src="js/userInteraction.js"></script>
 
-        <div class="clear"></div>
-        <div id="vrp-map-wrapper">
-          <div id="vrp-map" style="cursor: default; height:550px; width: 800px;"></div>
 
-          <div id="example-list">
-            <div>
-              <button id="set_example_vrp">Set Vehicle Routing</button>
-            </div>
-            <div>
-              <button id="set_example_tsp">Set Salesman</button>
-            </div>
-            <div>
-              <button id="set_example_tsp2">Set Open Salesman</button>
-            </div>
-          </div>
-        </div>
-        <div class="clear"></div>
-        <div id="vrp-error" style="float: right; padding-left: 20px;">
-        </div>
-
-        <div id="vrp-response" style="float: right; padding-left: 20px;">
-        </div>
-      </div>
   </body>
-
-  </html>
+</html>
