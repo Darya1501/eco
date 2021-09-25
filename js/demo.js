@@ -5,6 +5,8 @@ var iconObject = L.icon({
   iconAnchor: [12, 40],
 });
 
+var currentProfile = "foot";
+
 $(document).ready(function (e) {
   // reqButton.addEventListener("click", clickCallback);
 
@@ -35,6 +37,16 @@ $(document).ready(function (e) {
   var defaultKey = "c9b2b65d-be3d-4d96-b19c-48365a066ae3";
   var profile = "car";
 
+
+  transportBtn = document.querySelectorAll('.sidebar-btn');
+  transportBtn.forEach(btn => {
+    btn.addEventListener('click', event => {
+      currentProfile = event.target.closest('.sidebar-btn').id;
+      let myEvent = new Event("click");
+      const reqButton = document.getElementById("reqButton").dispatchEvent(myEvent);
+    })
+  })
+
   // create a routing client to fetch real routes, elevation.true is only supported for vehicle bike or foot
   var ghRouting = new GraphHopper.Routing({
     key: defaultKey,
@@ -58,6 +70,8 @@ $(document).ready(function (e) {
 function setupRoutingAPI(map, ghRouting) {
   map.setView([55.76, 37.57], 13);
 
+  ghRouting.vehicle = currentProfile;
+
   var instructionsDiv = $("#instructions");
   map.on("click", function (e) {
     if (ghRouting.points.length > 1) {
@@ -67,7 +81,6 @@ function setupRoutingAPI(map, ghRouting) {
 
     L.marker(e.latlng, { icon: iconObject }).addTo(routingLayer);
     ghRouting.addPoint(new GHInput(e.latlng.lat, e.latlng.lng));
-    console.log(ghRouting);
     if (ghRouting.points.length > 1) {
       // ******************
       //  Calculate route!
@@ -146,7 +159,7 @@ function setupRoutingAPI(map, ghRouting) {
   reqButton.addEventListener("click", function () {
     ghRouting.clearPoints();
     routingLayer.clearLayers();
-
+    ghRouting.vehicle = currentProfile;
     console.log(map, routingLayer);
     const from = document.getElementById("from");
     const to = document.getElementById("to");
@@ -271,7 +284,6 @@ function setupRoutingAPI(map, ghRouting) {
       },
     });
   });
-  console.log(reqButton);
 
   var instructionsHeader = $("#instructions-header");
   instructionsHeader.click(function () {
