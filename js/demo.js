@@ -489,16 +489,17 @@ function setupRoutingAPI(map, ghRouting) {
       setTimeout(() => {
         trashIcons = document.querySelectorAll(".leaflet-marker-icon");
       }, 1000);
-      document.getElementById("trash-can").addEventListener("change", function (e) {
-        trashIcons.forEach((icon) => {
-          if (icon.src.includes('trash')){
-            e.target.checked
-            ? (icon.style.display = "block")
-            : (icon.style.display = "none");
-
-          }
+      document
+        .getElementById("trash-can")
+        .addEventListener("change", function (e) {
+          trashIcons.forEach((icon) => {
+            if (icon.src.includes("trash")) {
+              e.target.checked
+                ? (icon.style.display = "block")
+                : (icon.style.display = "none");
+            }
+          });
         });
-      });
       AirPolutionData.forEach((m) => {
         L.marker([m.latitude, m.longitude], { icon: hideDetectorMark }).addTo(
           routingLayer
@@ -510,32 +511,39 @@ function setupRoutingAPI(map, ghRouting) {
 
     ghRouting.addPoint(new GHInput(e.latlng.lat, e.latlng.lng));
     if (ghRouting.points.length > 1) {
-                  /**/
-                  let latitute = e.latlng.lat;
-                  let longitude = e.latlng.lng;
-      
-                  let latDiff = AirPolutionData.slice().map((l) => {
-                    return Math.sqrt(
-                      Math.pow(Number(latitute) - Number(l.latitude), 2) +
-                        Math.pow(Number(longitude) - Number(l.longitude), 2)
-                    );
-                  });
-      
-                  var indexMenor = latDiff.indexOf(Math.min(...latDiff));
-      
-                  console.log(indexMenor);
-      
-                  const nearMarker = AirPolutionData[indexMenor];
-      
-                  console.log(nearMarker);
-                  if (nearMarker.AQI < 50) {
-                    routingLayer.options.style.color = "green";
-                  } else if (nearMarker.AQI < 200) {
-                    routingLayer.options.style.color = "yellow";
-                  } else {
-                    routingLayer.options.style.color = "red";
-                  }
-                  /**/
+      /**/
+      let latitute = e.latlng.lat;
+      let longitude = e.latlng.lng;
+
+      let latDiff = AirPolutionData.slice().map((l) => {
+        return Math.sqrt(
+          Math.pow(Number(latitute) - Number(l.latitude), 2) +
+            Math.pow(Number(longitude) - Number(l.longitude), 2)
+        );
+      });
+
+      var indexMenor = latDiff.indexOf(Math.min(...latDiff));
+
+      console.log(indexMenor);
+
+      const nearMarker = AirPolutionData[indexMenor];
+
+      console.log(nearMarker);
+      if (nearMarker.AQI < 50) {
+        routingLayer.options.style.color = "green";
+      } else if (nearMarker.AQI < 200) {
+        routingLayer.options.style.color = "yellow";
+      } else {
+        routingLayer.options.style.color = "red";
+      }
+      var outHtml =
+        "<br/>Индекс AQI Данного маршрута (качество воздуха) = " +
+        nearMarker.AQI;
+      outHtml += "<br/>Уровень CO2 = " + nearMarker.CO2;
+      outHtml += "<br/>Уровень вреда указан в легенде";
+      $("#aqi_message").html(outHtml);
+
+      /**/
       // ******************
       //  Calculate route!
       // ******************
@@ -621,16 +629,17 @@ function setupRoutingAPI(map, ghRouting) {
     setTimeout(() => {
       trashIcons = document.querySelectorAll(".leaflet-marker-icon");
     }, 1000);
-    document.getElementById("trash-can").addEventListener("change", function (e) {
-      trashIcons.forEach((icon) => {
-        if (icon.src.includes('trash')){
-          e.target.checked
-          ? (icon.style.display = "block")
-          : (icon.style.display = "none");
-
-        }
+    document
+      .getElementById("trash-can")
+      .addEventListener("change", function (e) {
+        trashIcons.forEach((icon) => {
+          if (icon.src.includes("trash")) {
+            e.target.checked
+              ? (icon.style.display = "block")
+              : (icon.style.display = "none");
+          }
+        });
       });
-    });
     ghRouting.vehicle = currentProfile;
     if (ghRouting.points.length > 1) {
       AirPolutionData.forEach((m) => {
@@ -711,10 +720,15 @@ function setupRoutingAPI(map, ghRouting) {
               routingLayer.options.style.color = "green";
             } else if (nearMarker.AQI < 200) {
               routingLayer.options.style.color = "yellow";
-
             } else {
               routingLayer.options.style.color = "red";
             }
+            var outHtml =
+              "<br/>Индекс AQI Данного маршрута (качество воздуха) = " +
+              nearMarker.AQI;
+            outHtml += "<br/>Уровень CO2 = " + nearMarker.CO2;
+            outHtml += "<br/>Уровень вреда указан в легенде";
+            $("#aqi_message").html(outHtml);
             /**/
 
             // ******************
