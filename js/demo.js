@@ -470,7 +470,7 @@ $(document).ready(function (e) {
 });
 let trashIcons = null;
 
-function setupRoutingAPI(map, ghRouting) {
+ function setupRoutingAPI(map, ghRouting) {
   map.setView([55.76, 37.57], 13);
   ghRouting.vehicle = currentProfile;
 
@@ -508,7 +508,6 @@ function setupRoutingAPI(map, ghRouting) {
     }
 
     L.marker(e.latlng, { icon: iconObject }).addTo(routingLayer);
-
     ghRouting.addPoint(new GHInput(e.latlng.lat, e.latlng.lng));
     if (ghRouting.points.length > 1) {
       /**/
@@ -614,6 +613,7 @@ function setupRoutingAPI(map, ghRouting) {
           var str = "An error occured: " + err.message;
           $("#routing-response").text(str);
         });
+        
     }
   });
 
@@ -739,16 +739,12 @@ function setupRoutingAPI(map, ghRouting) {
               .then(function (json) {
                 var path = json.paths[0];
                 console.log(path);
+
                 routingLayer.addData({
                   type: "Feature",
                   geometry: path.points,
                 });
-                // var pathCopy = path;
-                // pathCopy.points.coordinates[7][0] = 40.1111;
-                // routingLayer.addData({
-                //   type: "Feature",
-                //   geometry: pathCopy.points,
-                // });
+
                 var outHtml = "Distance in meter:" + path.distance;
                 outHtml += "<br/>Times in seconds:" + path.time / 1000;
                 outHtml +=
@@ -807,7 +803,40 @@ function setupRoutingAPI(map, ghRouting) {
                 var str = "An error occured: " + err.message;
                 $("#routing-response").text(str);
               });
-          },
+
+
+          ghRouting.vehicle = 'bike'
+          ghRouting
+          .doRequest()
+          .then(function (json) {
+            var path = json.paths[0];
+            console.log(path);
+            routingLayer.options.style.color = "green";
+
+            routingLayer.addData({
+              type: "Feature",
+              geometry: path.points,
+            });
+
+          
+            if (path.bbox) {
+              var minLon = path.bbox[0];
+              var minLat = path.bbox[1];
+              var maxLon = path.bbox[2];
+              var maxLat = path.bbox[3];
+              var tmpB = new L.LatLngBounds(
+                new L.LatLng(minLat, minLon),
+                new L.LatLng(maxLat, maxLon)
+              );
+              map.fitBounds(tmpB);
+            }
+
+          })
+          .catch(function (err) {
+            var str = "An error occured: " + err.message;
+            $("#routing-response").text(str);
+          });
+          }
         });
       },
     });
