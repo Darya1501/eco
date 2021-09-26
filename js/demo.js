@@ -1,325 +1,325 @@
-// AirPolutionData = [
-//   {
-//     StreetName: "Улица 1905 года",
-//     CO2: "473.00",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.764625",
-//     longitude: "37.561237",
-//   },
-//   {
-//     StreetName: "Баррикадная",
-//     CO2: "473.00",
-//     LOS: "9.69",
-//     AQI: "94.4",
-//     latitude: "55.760861",
-//     longitude: "37.579600",
-//   },
-//   {
-//     StreetName: "Бережковская набережная",
-//     CO2: "614.00",
-//     LOS: "44,359.00",
-//     AQI: "122.7",
-//     latitude: "55.735452",
-//     longitude: "37.561650",
-//   },
-//   {
-//     StreetName: "Варшавское шоссе",
-//     CO2: "331.2",
-//     LOS: "44,414.00",
-//     AQI: "66.1",
-//     latitude: "55.608765",
-//     longitude: "37.605135",
-//   },
-//   {
-//     StreetName: "Волгоградский проспект",
-//     CO2: "331.2",
-//     LOS: "44,414.00",
-//     AQI: "66.1",
-//     latitude: "55.707670",
-//     longitude: "37.757134",
-//   },
-//   {
-//     StreetName: "Воробьёвская набережная",
-//     CO2: "614.00",
-//     LOS: "44,359.00",
-//     AQI: "122.00",
-//     latitude: "55.718212",
-//     longitude: "37.539534",
-//   },
-//   {
-//     StreetName: "Госпитальная набережная",
-//     CO2: "473.00",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.771836",
-//     longitude: "37.694903",
-//   },
-//   {
-//     StreetName: "Дмитровское шоссе",
-//     CO2: "331.00",
-//     LOS: "44,414.00",
-//     AQI: "122.00",
-//     latitude: "55.915071",
-//     longitude: "37.544651",
-//   },
-//   {
-//     StreetName: "Звенигородское шоссе",
-//     CO2: "331.00",
-//     LOS: "44,414.00",
-//     AQI: "66.00",
-//     latitude: "55.767327",
-//     longitude: "37.528394",
-//   },
-//   {
-//     StreetName: "Каширское шоссе",
-//     CO2: "236.00",
-//     LOS: "44,412.00",
-//     AQI: "47.2",
-//     latitude: "55.531524",
-//     longitude: "37.767493",
-//   },
-//   {
-//     StreetName: "Кетчерская улица",
-//     CO2: "236.00",
-//     LOS: "44,412.00",
-//     AQI: "47.2",
-//     latitude: "55.743867",
-//     longitude: "37.826907",
-//   },
-//   {
-//     StreetName: "Королева улица",
-//     CO2: "331.00",
-//     LOS: "44,414.00",
-//     AQI: "66.00",
-//     latitude: "55.821618",
-//     longitude: "37.611870",
-//   },
-//   {
-//     StreetName: "Крымская набережная",
-//     CO2: "473.00",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.736479",
-//     longitude: "37.605611",
-//   },
-//   {
-//     StreetName: "Энтузиастов шоссе",
-//     CO2: "236.5",
-//     LOS: "44,412.00",
-//     AQI: "47.1",
-//     latitude: "55.778822",
-//     longitude: "37.851412",
-//   },
-//   {
-//     StreetName: "Щелковское шоссе",
-//     CO2: "236.7",
-//     LOS: "44,412.00",
-//     AQI: "47.1",
-//     latitude: "55.897670",
-//     longitude: "38.037790",
-//   },
-//   {
-//     StreetName: "Цветной бульвар",
-//     CO2: "473.2",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.770414",
-//     longitude: "37.622249",
-//   },
-//   {
-//     StreetName: "Тверская улица",
-//     CO2: "331.3",
-//     LOS: "44,414.00",
-//     AQI: "66.1",
-//     latitude: "55.764760",
-//     longitude: "37.605509",
-//   },
-//   {
-//     StreetName: "Таганская улица",
-//     CO2: "331.2",
-//     LOS: "44,414.00",
-//     AQI: "66.1",
-//     latitude: "55.740014",
-//     longitude: "37.662942",
-//   },
-//   {
-//     StreetName: "Страстной бульвар",
-//     CO2: "473.1",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.766678",
-//     longitude: "37.609204",
-//   },
-//   {
-//     StreetName: "Сретенский бульвар",
-//     CO2: "331.1",
-//     LOS: "44,414.00",
-//     AQI: "66.00",
-//     latitude: "55.766299",
-//     longitude: "37.633745",
-//   },
-//   {
-//     StreetName: "Солженицына улица",
-//     CO2: "331.2",
-//     LOS: "44,414.00",
-//     AQI: "66.1",
-//     latitude: "55.743653",
-//     longitude: "37.661707",
-//   },
-//   {
-//     StreetName: "Садовая-самотечная улица",
-//     CO2: "331.1",
-//     LOS: "44,414.00",
-//     AQI: "61.1",
-//     latitude: "55.773784",
-//     longitude: "37.617485",
-//   },
-//   {
-//     StreetName: "Садовая-каретная улица",
-//     CO2: "331.2",
-//     LOS: "44,414.00",
-//     AQI: "66.1",
-//     latitude: "55.772978",
-//     longitude: "37.608251",
-//   },
-//   {
-//     StreetName: "Рождественский бульвар",
-//     CO2: "473.2",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.766610",
-//     longitude: "37.627506",
-//   },
-//   {
-//     StreetName: "Пятницкая улица",
-//     CO2: "473.2",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.738198",
-//     longitude: "37.628206",
-//   },
-//   {
-//     StreetName: "Профсоюзная улица",
-//     CO2: "331.2",
-//     LOS: "44,414.00",
-//     AQI: "66.00",
-//     latitude: "55.649522",
-//     longitude: "37.532416",
-//   },
-//   {
-//     StreetName: "Проспект Вернадского",
-//     CO2: "472.9",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.682355",
-//     longitude: "37.516987",
-//   },
-//   {
-//     StreetName: "Петровский бульвар",
-//     CO2: "373.2",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.767596",
-//     longitude: "37.617631",
-//   },
-//   {
-//     StreetName: "Новый Арбат",
-//     CO2: "331.3",
-//     LOS: "44,414.00",
-//     AQI: "66.1",
-//     latitude: "55.752642",
-//     longitude: "37.587667",
-//   },
-//   {
-//     StreetName: "Новодевичья набережная",
-//     CO2: "615.1",
-//     LOS: "44,359.00",
-//     AQI: "122.7",
-//     latitude: "55.728217",
-//     longitude: "37.551892",
-//   },
-//   {
-//     StreetName: "Никитская Б. улица",
-//     CO2: "473.2",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.757532",
-//     longitude: "37.598229",
-//   },
-//   {
-//     StreetName: "Нагатскинская набережная",
-//     CO2: "473.2",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.685073",
-//     longitude: "37.661319",
-//   },
-//   {
-//     StreetName: "Набережная Тараса Шевченко",
-//     CO2: "473.1",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.748448",
-//     longitude: "37.550148",
-//   },
-//   {
-//     StreetName: "Моховая улица",
-//     CO2: "331.2",
-//     LOS: "44,414.00",
-//     AQI: "66.1",
-//     latitude: "55.752753",
-//     longitude: "37.611202",
-//   },
-//   {
-//     StreetName: "Мосфильмосвкая улица",
-//     CO2: "614.9",
-//     LOS: "44,359.00",
-//     AQI: "122.7",
-//     latitude: "55.714779",
-//     longitude: "37.513997",
-//   },
-//   {
-//     StreetName: "Минское шоссе",
-//     CO2: "615.2",
-//     LOS: "44,359.00",
-//     AQI: "122.7",
-//     latitude: "55.567148",
-//     longitude: "36.659155",
-//   },
-//   {
-//     StreetName: "Люблинская улица",
-//     CO2: "236.5",
-//     LOS: "44,412.00",
-//     AQI: "47.1",
-//     latitude: "55.673160",
-//     longitude: "37.739492",
-//   },
-//   {
-//     StreetName: "Лужнецкая набережная",
-//     CO2: "473.1",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "55.711466",
-//     longitude: "37.557084",
-//   },
-//   {
-//     StreetName: "Ленинградское шоссе",
-//     CO2: "473.00",
-//     LOS: "44,386.00",
-//     AQI: "94.4",
-//     latitude: "56.222924",
-//     longitude: "36.920751",
-//   },
-//   {
-//     StreetName: "Кутузовский проспект",
-//     CO2: "331.2",
-//     LOS: "44,414.00",
-//     AQI: "66.1",
-//     latitude: "55.735441",
-//     longitude: "37.511535",
-//   },
-// ];
+AirPolutionData = [
+  {
+    StreetName: "Улица 1905 года",
+    CO2: "473.00",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.764625",
+    longitude: "37.561237",
+  },
+  {
+    StreetName: "Баррикадная",
+    CO2: "473.00",
+    LOS: "9.69",
+    AQI: "94.4",
+    latitude: "55.760861",
+    longitude: "37.579600",
+  },
+  {
+    StreetName: "Бережковская набережная",
+    CO2: "614.00",
+    LOS: "44,359.00",
+    AQI: "122.7",
+    latitude: "55.735452",
+    longitude: "37.561650",
+  },
+  {
+    StreetName: "Варшавское шоссе",
+    CO2: "331.2",
+    LOS: "44,414.00",
+    AQI: "66.1",
+    latitude: "55.608765",
+    longitude: "37.605135",
+  },
+  {
+    StreetName: "Волгоградский проспект",
+    CO2: "331.2",
+    LOS: "44,414.00",
+    AQI: "66.1",
+    latitude: "55.707670",
+    longitude: "37.757134",
+  },
+  {
+    StreetName: "Воробьёвская набережная",
+    CO2: "614.00",
+    LOS: "44,359.00",
+    AQI: "122.00",
+    latitude: "55.718212",
+    longitude: "37.539534",
+  },
+  {
+    StreetName: "Госпитальная набережная",
+    CO2: "473.00",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.771836",
+    longitude: "37.694903",
+  },
+  {
+    StreetName: "Дмитровское шоссе",
+    CO2: "331.00",
+    LOS: "44,414.00",
+    AQI: "122.00",
+    latitude: "55.915071",
+    longitude: "37.544651",
+  },
+  {
+    StreetName: "Звенигородское шоссе",
+    CO2: "331.00",
+    LOS: "44,414.00",
+    AQI: "66.00",
+    latitude: "55.767327",
+    longitude: "37.528394",
+  },
+  {
+    StreetName: "Каширское шоссе",
+    CO2: "236.00",
+    LOS: "44,412.00",
+    AQI: "47.2",
+    latitude: "55.531524",
+    longitude: "37.767493",
+  },
+  {
+    StreetName: "Кетчерская улица",
+    CO2: "236.00",
+    LOS: "44,412.00",
+    AQI: "47.2",
+    latitude: "55.743867",
+    longitude: "37.826907",
+  },
+  {
+    StreetName: "Королева улица",
+    CO2: "331.00",
+    LOS: "44,414.00",
+    AQI: "66.00",
+    latitude: "55.821618",
+    longitude: "37.611870",
+  },
+  {
+    StreetName: "Крымская набережная",
+    CO2: "473.00",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.736479",
+    longitude: "37.605611",
+  },
+  {
+    StreetName: "Энтузиастов шоссе",
+    CO2: "236.5",
+    LOS: "44,412.00",
+    AQI: "47.1",
+    latitude: "55.778822",
+    longitude: "37.851412",
+  },
+  {
+    StreetName: "Щелковское шоссе",
+    CO2: "236.7",
+    LOS: "44,412.00",
+    AQI: "47.1",
+    latitude: "55.897670",
+    longitude: "38.037790",
+  },
+  {
+    StreetName: "Цветной бульвар",
+    CO2: "473.2",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.770414",
+    longitude: "37.622249",
+  },
+  {
+    StreetName: "Тверская улица",
+    CO2: "331.3",
+    LOS: "44,414.00",
+    AQI: "66.1",
+    latitude: "55.764760",
+    longitude: "37.605509",
+  },
+  {
+    StreetName: "Таганская улица",
+    CO2: "331.2",
+    LOS: "44,414.00",
+    AQI: "66.1",
+    latitude: "55.740014",
+    longitude: "37.662942",
+  },
+  {
+    StreetName: "Страстной бульвар",
+    CO2: "473.1",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.766678",
+    longitude: "37.609204",
+  },
+  {
+    StreetName: "Сретенский бульвар",
+    CO2: "331.1",
+    LOS: "44,414.00",
+    AQI: "66.00",
+    latitude: "55.766299",
+    longitude: "37.633745",
+  },
+  {
+    StreetName: "Солженицына улица",
+    CO2: "331.2",
+    LOS: "44,414.00",
+    AQI: "66.1",
+    latitude: "55.743653",
+    longitude: "37.661707",
+  },
+  {
+    StreetName: "Садовая-самотечная улица",
+    CO2: "331.1",
+    LOS: "44,414.00",
+    AQI: "61.1",
+    latitude: "55.773784",
+    longitude: "37.617485",
+  },
+  {
+    StreetName: "Садовая-каретная улица",
+    CO2: "331.2",
+    LOS: "44,414.00",
+    AQI: "66.1",
+    latitude: "55.772978",
+    longitude: "37.608251",
+  },
+  {
+    StreetName: "Рождественский бульвар",
+    CO2: "473.2",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.766610",
+    longitude: "37.627506",
+  },
+  {
+    StreetName: "Пятницкая улица",
+    CO2: "473.2",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.738198",
+    longitude: "37.628206",
+  },
+  {
+    StreetName: "Профсоюзная улица",
+    CO2: "331.2",
+    LOS: "44,414.00",
+    AQI: "66.00",
+    latitude: "55.649522",
+    longitude: "37.532416",
+  },
+  {
+    StreetName: "Проспект Вернадского",
+    CO2: "472.9",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.682355",
+    longitude: "37.516987",
+  },
+  {
+    StreetName: "Петровский бульвар",
+    CO2: "373.2",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.767596",
+    longitude: "37.617631",
+  },
+  {
+    StreetName: "Новый Арбат",
+    CO2: "331.3",
+    LOS: "44,414.00",
+    AQI: "66.1",
+    latitude: "55.752642",
+    longitude: "37.587667",
+  },
+  {
+    StreetName: "Новодевичья набережная",
+    CO2: "615.1",
+    LOS: "44,359.00",
+    AQI: "122.7",
+    latitude: "55.728217",
+    longitude: "37.551892",
+  },
+  {
+    StreetName: "Никитская Б. улица",
+    CO2: "473.2",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.757532",
+    longitude: "37.598229",
+  },
+  {
+    StreetName: "Нагатскинская набережная",
+    CO2: "473.2",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.685073",
+    longitude: "37.661319",
+  },
+  {
+    StreetName: "Набережная Тараса Шевченко",
+    CO2: "473.1",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.748448",
+    longitude: "37.550148",
+  },
+  {
+    StreetName: "Моховая улица",
+    CO2: "331.2",
+    LOS: "44,414.00",
+    AQI: "66.1",
+    latitude: "55.752753",
+    longitude: "37.611202",
+  },
+  {
+    StreetName: "Мосфильмосвкая улица",
+    CO2: "614.9",
+    LOS: "44,359.00",
+    AQI: "122.7",
+    latitude: "55.714779",
+    longitude: "37.513997",
+  },
+  {
+    StreetName: "Минское шоссе",
+    CO2: "615.2",
+    LOS: "44,359.00",
+    AQI: "122.7",
+    latitude: "55.567148",
+    longitude: "36.659155",
+  },
+  {
+    StreetName: "Люблинская улица",
+    CO2: "236.5",
+    LOS: "44,412.00",
+    AQI: "47.1",
+    latitude: "55.673160",
+    longitude: "37.739492",
+  },
+  {
+    StreetName: "Лужнецкая набережная",
+    CO2: "473.1",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "55.711466",
+    longitude: "37.557084",
+  },
+  {
+    StreetName: "Ленинградское шоссе",
+    CO2: "473.00",
+    LOS: "44,386.00",
+    AQI: "94.4",
+    latitude: "56.222924",
+    longitude: "36.920751",
+  },
+  {
+    StreetName: "Кутузовский проспект",
+    CO2: "331.2",
+    LOS: "44,414.00",
+    AQI: "66.1",
+    latitude: "55.735441",
+    longitude: "37.511535",
+  },
+];
 
 TrashMarkersData = [
   { latitude: "55.764625", longitude: "37.561237" },
@@ -373,6 +373,13 @@ var trashIcon = L.icon({
   iconAnchor: [12, 40],
 });
 
+var hideDetectorMark = L.icon({
+  iconUrl: "./img/hide_detector_mark.png",
+  shadowSize: [50, 64],
+  shadowAnchor: [4, 62],
+  iconAnchor: [12, 40],
+});
+
 var currentProfile = "foot";
 
 var marker = L.icon({
@@ -421,25 +428,26 @@ $(document).ready(function (e) {
         .dispatchEvent(myEvent);
     });
   });
-  let trashIcons = null
+  let trashIcons = null;
   setTimeout(() => {
     trashIcons = document.querySelectorAll(".leaflet-marker-icon");
   }, 1000);
 
+  document.getElementById("trash-can").addEventListener("change", function (e) {
+    trashIcons.forEach((icon) => {
+      e.target.checked
+        ? (icon.style.display = "block")
+        : (icon.style.display = "none");
+    });
+  });
 
-  document.getElementById('trash-can').addEventListener("change", function(e){
-    trashIcons.forEach(icon=>{
-      e.target.checked ? icon.style.display = 'block' : icon.style.display = 'none'
-    })
-  })
-
-  transportBtn.forEach(btn => {
-    btn.addEventListener('click', event => {
-      currentProfile = event.target.closest('.sidebar-btn').id;
+  transportBtn.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      currentProfile = event.target.closest(".sidebar-btn").id;
       // let myEvent = new Event("click");
       // const reqButton = document.getElementById("reqButton").dispatchEvent(myEvent);
-    })
-  })
+    });
+  });
 
   // create a routing client to fetch real routes, elevation.true is only supported for vehicle bike or foot
   var ghRouting = new GraphHopper.Routing({
@@ -460,6 +468,7 @@ $(document).ready(function (e) {
 
   showTab($(".tabs-menu li > a[href='" + tmpTab + "']"));
 });
+let trashIcons = null;
 
 function setupRoutingAPI(map, ghRouting) {
   map.setView([55.76, 37.57], 13);
@@ -467,23 +476,66 @@ function setupRoutingAPI(map, ghRouting) {
 
   // "latitude": "55.736479",
   // "longitude": "37.605611"
-
   var instructionsDiv = $("#instructions");
   map.on("click", function (e) {
     if (ghRouting.points.length > 1) {
       ghRouting.clearPoints();
       routingLayer.clearLayers();
-      // AirPolutionData.forEach((m) => {
-      //   L.marker([m.latitude, m.longitude], { icon: iconObject }).addTo(
-      //     routingLayer
-      //   );
-      // });
+      TrashMarkersData.forEach((t) => {
+        L.marker([t.latitude, t.longitude], { icon: trashIcon }).addTo(
+          routingLayer
+        );
+      });
+      setTimeout(() => {
+        trashIcons = document.querySelectorAll(".leaflet-marker-icon");
+      }, 1000);
+      document.getElementById("trash-can").addEventListener("change", function (e) {
+        trashIcons.forEach((icon) => {
+          if (icon.src.includes('trash')){
+            e.target.checked
+            ? (icon.style.display = "block")
+            : (icon.style.display = "none");
+
+          }
+        });
+      });
+      AirPolutionData.forEach((m) => {
+        L.marker([m.latitude, m.longitude], { icon: hideDetectorMark }).addTo(
+          routingLayer
+        );
+      });
     }
 
     L.marker(e.latlng, { icon: iconObject }).addTo(routingLayer);
 
     ghRouting.addPoint(new GHInput(e.latlng.lat, e.latlng.lng));
     if (ghRouting.points.length > 1) {
+                  /**/
+                  let latitute = e.latlng.lat;
+                  let longitude = e.latlng.lng;
+      
+                  let latDiff = AirPolutionData.slice().map((l) => {
+                    return Math.sqrt(
+                      Math.pow(Number(latitute) - Number(l.latitude), 2) +
+                        Math.pow(Number(longitude) - Number(l.longitude), 2)
+                    );
+                  });
+      
+                  var indexMenor = latDiff.indexOf(Math.min(...latDiff));
+      
+                  console.log(indexMenor);
+      
+                  const nearMarker = AirPolutionData[indexMenor];
+      
+                  console.log(nearMarker);
+                  if (nearMarker.AQI < 50) {
+                    routingLayer.options.style.color = "green";
+                  } else if (nearMarker.AQI < 200) {
+                    routingLayer.options.style.color = "yellow";
+                  } else {
+                    routingLayer.options.style.color = "red";
+                  }
+                  /**/
       // ******************
       //  Calculate route!
       // ******************
@@ -561,13 +613,31 @@ function setupRoutingAPI(map, ghRouting) {
   reqButton.addEventListener("click", function () {
     ghRouting.clearPoints();
     routingLayer.clearLayers();
+    TrashMarkersData.forEach((t) => {
+      L.marker([t.latitude, t.longitude], { icon: trashIcon }).addTo(
+        routingLayer
+      );
+    });
+    setTimeout(() => {
+      trashIcons = document.querySelectorAll(".leaflet-marker-icon");
+    }, 1000);
+    document.getElementById("trash-can").addEventListener("change", function (e) {
+      trashIcons.forEach((icon) => {
+        if (icon.src.includes('trash')){
+          e.target.checked
+          ? (icon.style.display = "block")
+          : (icon.style.display = "none");
+
+        }
+      });
+    });
     ghRouting.vehicle = currentProfile;
     if (ghRouting.points.length > 1) {
-      // AirPolutionData.forEach((m) => {
-      //   L.marker([m.latitude, m.longitude], { icon: iconObject }).addTo(
-      //     routingLayer
-      //   );
-      // });
+      AirPolutionData.forEach((m) => {
+        L.marker([m.latitude, m.longitude], { icon: hideDetectorMark }).addTo(
+          routingLayer
+        );
+      });
     }
 
     const from = document.getElementById("from");
@@ -620,24 +690,31 @@ function setupRoutingAPI(map, ghRouting) {
             });
 
             /**/
-            // let latitute = markers[0].lat;
-            // let longitude = markers[0].lng;
+            let latitute = markers[0].lat;
+            let longitude = markers[0].lng;
 
-            // let latDiff = AirPolutionData.slice().map((l) => {
-            //   return Math.sqrt(
-            //     Math.pow(Number(latitute) - Number(l.latitude), 2) +
-            //       Math.pow(Number(longitude) - Number(l.longitude), 2)
-            //   );
-            // });
+            let latDiff = AirPolutionData.slice().map((l) => {
+              return Math.sqrt(
+                Math.pow(Number(latitute) - Number(l.latitude), 2) +
+                  Math.pow(Number(longitude) - Number(l.longitude), 2)
+              );
+            });
 
-            // var indexMenor = latDiff.indexOf(Math.min(...latDiff));
+            var indexMenor = latDiff.indexOf(Math.min(...latDiff));
 
-            // console.log(indexMenor);
+            console.log(indexMenor);
 
-            // const nearMarker = AirPolutionData[28];
+            const nearMarker = AirPolutionData[indexMenor];
 
-            // console.log(latDiff);
-            // routingLayer.options.style.color = "red";
+            console.log(nearMarker);
+            if (nearMarker.AQI < 50) {
+              routingLayer.options.style.color = "green";
+            } else if (nearMarker.AQI < 200) {
+              routingLayer.options.style.color = "yellow";
+
+            } else {
+              routingLayer.options.style.color = "red";
+            }
             /**/
 
             // ******************
