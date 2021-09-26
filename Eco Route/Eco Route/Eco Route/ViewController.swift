@@ -18,7 +18,7 @@ class ViewController: UIViewController {
             self.webView.topAnchor.constraint(equalTo: self.view.topAnchor),
         ])
         self.view.setNeedsLayout()
-        if let url = URL(string: "") {
+        if let url = URL(string: "https://red-bilberry.ru/eco/") {
             let request = URLRequest(url: url)
             self.webView.load(request)
         }
