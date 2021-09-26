@@ -433,13 +433,13 @@ $(document).ready(function (e) {
     })
   })
 
-  // transportBtn.forEach(btn => {
-  //   btn.addEventListener('click', event => {
-  //     currentProfile = event.target.closest('.sidebar-btn').id;
-  //     let myEvent = new Event("click");
-  //     const reqButton = document.getElementById("reqButton").dispatchEvent(myEvent);
-  //   })
-  // })
+  transportBtn.forEach(btn => {
+    btn.addEventListener('click', event => {
+      currentProfile = event.target.closest('.sidebar-btn').id;
+      // let myEvent = new Event("click");
+      // const reqButton = document.getElementById("reqButton").dispatchEvent(myEvent);
+    })
+  })
 
   // create a routing client to fetch real routes, elevation.true is only supported for vehicle bike or foot
   var ghRouting = new GraphHopper.Routing({
